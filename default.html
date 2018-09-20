@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function validateForm() {
+    var nome = document.forms["form"]["nome"].value;
+    if (nome == "") {
+        alert("Nome é um campo obrigatório");
+        return false;
+    }
+    var senha = document.forms["form"]["senha"].value;
+    if (senha == "") {
+        alert("Senha é um campo obrigatório");
+        return false;
+    }
+    var rsenha = document.forms["form"]["rsenha"].value;
+    if (rsenha == "") {
+        alert("Repetir senha é um campo obrigatório");
+        return false;
+    }    
+}
+</script>
+</head>
+<body>
+
+<style>
+form{
+	text-align:left;
+}
+h2{
+	text-align:left;
+}
+</style>
+
+<h2>Cadastro</h2>
+
+<form name="form" action="/action_page.php" onsubmit="return validateForm()">
+  Nome:<br>
+  <input type="text" name="nome" >
+  <br>
+  Apelido:<br>
+  <input type="text" name="apelido">
+  <br>
+  Senha:<br>
+  <input type="password" name="senha">
+  <br>
+  Repetir Senha:<br>
+  <input type="password" name="rsenha">
+  <br>  
+  Email:<br>
+  <input type="mail" name="email">
+  <br> 
+  Data Nascimento:<br>
+  <input type="date" name="datanasc">
+  <br>    
+  <input type="radio" name="genero" value="masculino" checked> Masculino
+  <input type="radio" name="genero" value="feminino"> Feminino<br>  
+  <br>
+  <input type="submit" value="Cadastrar">
+</form> 
+
+</body>
+</html>
